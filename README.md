@@ -161,6 +161,12 @@ Includes a live playground to test the following logic problem:
 | I. T. S.             | Last name cannot be an initial                                         |
 | Ivan. Tri Septian    | Dot not allowed after a word                                           |
 
+**The Logic Test (.js) file are also attached in this project.**
+Simply run it with
+```bash
+node logic-test.js
+```
+
 ---
 
 ## 🧹 Linting & Formatting
