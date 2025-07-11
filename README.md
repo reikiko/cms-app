@@ -1,3 +1,4 @@
+![Home Screenshot](public/home.png)
 # 🧠 CMS App – Take Home Frontend Test
 
 A **CMS (Content Management System)** application built with **Next.js**, **TypeScript**, **Zustand**, **Tailwind CSS**, and **Ant Design**. It includes authentication, settings management, a logic test playground, and a fully responsive layout.
@@ -57,6 +58,7 @@ cms-app/
 │   │   │   └── menus/          # Menu Management page
 │   │   ├── logic/              # Logic Test routes
 │   │   └── globals.css         # Tailwind + Ant styles
+│   │   └── page.tsx            # Home page
 │   ├── components/
 │   │   └── AppLayout.tsx       # Layout with Header + Sidebar
 │   ├── hooks/
@@ -94,7 +96,10 @@ npm install
 # 3. Run development server
 npm run dev
 
-# 4. Run Server
+# 4. Build server
+npm run build
+
+# 5. Run server
 npm run start
 ```
 
