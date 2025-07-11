@@ -3,7 +3,9 @@
 import AppLayout from "@/components/AppLayout";
 import { useAuthStore } from "@/stores/authStore";
 import { Carousel, Col, Row, Statistic } from "antd";
+import type { StatisticProps } from "antd";
 import { LikeOutlined } from "@ant-design/icons";
+import CountUp from "react-countup";
 
 export default function Home() {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
@@ -16,6 +18,10 @@ export default function Home() {
     textAlign: "center",
     background: "oklch(27.9% 0.041 260.031)",
   };
+
+  const formatter: StatisticProps["formatter"] = (value) => (
+    <CountUp end={value as number} separator="," />
+  );
 
   return (
     <AppLayout>
@@ -51,13 +57,18 @@ export default function Home() {
         </Carousel>
         <Row gutter={16}>
           <Col span={12}>
-            <Statistic title="Active Users" value={112893} />
+            <Statistic
+              title="Active Users"
+              value={2427}
+              formatter={formatter}
+            />
           </Col>
           <Col span={12}>
             <Statistic
-              title="Account Balance (CNY)"
-              value={112893}
+              title="Account Balance (IDR)"
+              value={1024189}
               precision={2}
+              formatter={formatter}
             />
           </Col>
         </Row>
@@ -65,12 +76,12 @@ export default function Home() {
           <Col span={12}>
             <Statistic
               title="Feedback"
-              value={1128}
+              value={1024}
               prefix={<LikeOutlined />}
             />
           </Col>
           <Col span={12}>
-            <Statistic title="Unmerged" value={93} suffix="/ 100" />
+            <Statistic title="Unmerged" value={89} suffix="/ 100" />
           </Col>
         </Row>
       </div>
